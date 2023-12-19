@@ -25,8 +25,8 @@ namespace MS4SArgHasher.Actions
         public void SetData(params string[] data)
         {
             pathData = data[1];
-            filename = data.Length > 1 ? data[2] : "checksum";
-            separator = data.Length > 2 ? data[3] : ":";
+            filename = data.Length > 2 ? data[2] : "checksum";
+            separator = data.Length > 3 ? data[3] : ":";
         }
 
         public void Start() => Checksum(pathData, filename, separator);
